@@ -1,11 +1,11 @@
 const express = require('express');
 const socketIO = require('socket.io');
 const path = require('path');
-const http = require('http');
+const https = require('https');
 
 const app = express();
 
-let server = http.createServer(app);
+let server = https.createServer(app);
 
 const publicPath = path.resolve(__dirname, '../public');
 const port = process.env.PORT || 3000;
